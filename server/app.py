@@ -46,10 +46,10 @@ def get_hero_by_id(id):
                     'description': power.description,
                     'id': power.id,
                     'name': power.name
-                },  # Changed to single object
+                },  
                 'power_id': hp.power_id,
                 'strength': hp.strength
-            } for hp in hero.hero_powers for power in hero.powers if power.id == hp.power_id]  # Modified to ensure matching power
+            } for hp in hero.hero_powers for power in hero.powers if power.id == hp.power_id]  
 
         }
         return make_response(response, 200)
